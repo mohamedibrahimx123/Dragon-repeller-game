@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0a0a23;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+#game {
+  background-color: #ffffff;
+  color: #0a0a23;
+  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+#stats,
+#controls,
+#monsterStats {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #0a0a23;
+  border-radius: 10px;
+}
+
+#monsterStats {
+  display: none;
+  background-color: #c70d0d;
+  color: #ffffff;
+}
+
+.stat {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+button {
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 2px solid #feac32;
+  color: #0a0a23;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+  font-size: 1em;
+}
+
+button:hover {
+  background-image: linear-gradient(#ffe08a, #ffc04c);
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#text {
+  background-color: #0a0a23;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+@media (min-width: 600px) {
+  #controls {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  button {
+    width: auto;
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  #game {
+    padding: 15px;
+  }
+  button {
+    font-size: 0.9em;
+  }
+  #text {
+    font-size: 0.9em;
+  }
+}
